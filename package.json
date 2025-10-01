@@ -12,17 +12,17 @@
   "publishConfig": {
     "registry": "https://npm.winston-ai-mcp.github.com"
   },
-  "main": "dist/index.js",
+  "main": "dist/http-server.js",
   "bin": {
-    "winston-ai-mcp": "dist/index.js"
+    "winston-ai-mcp": "dist/http-server.js"
   },
   "scripts": {
-    "build": "tsc && chmod 755 dist/index.js",
+    "build": "tsc && chmod 755 dist/http-server.js",
     "lint": "eslint --ext .js,.ts .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "prepublishOnly": "npm run build",
-    "start": "node dist/index.js",
-    "mcp-start": "tsc && chmod 755 dist/index.js && node dist/index.js",
+    "start": "node dist/http-server.js",
+    "mcp-start": "node dist/http-server.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
